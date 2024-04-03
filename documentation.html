@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <title>Documentation</title>
+    <body>
+        <table>
+            <tr>
+                <th>Function</th>>
+                <th>Method</th>>
+                <th>URI</th>>
+                <th>Neccessary parameters</th>>
+                <th>Response</th>>
+                <th>Response Content-Type</th>>
+                <th>Input Example</th>>
+                <th>Output Example</th>>
+            </tr>
+            <tr>
+                <td>Retrieve all items</td>>
+                <td>GET</td>>
+                <td>…/api/items</td>>
+                <td></td>>
+                <td>200 on success</td>>
+                <td>JSON</td>>
+                <td></td>>
+                <td>[{"author":"Tim Berners-Lee","alt":"Image ….}</td>>
+            </tr>
+            <tr>
+                <td>Create item</td>>
+                <td>POST</td>>
+                <td>…/api/items</td>>
+                <td>JSON object with defined author, alt, image, tags, and description fields.</td>>
+                <td>201 on success</td>>
+                <td></td>>
+                <td>{"author":"Tim Berners-Lee","alt":"Image ….}</td>>
+                <td></td>>
+            </tr>
+            <tr>
+                <td>Retrieve item</td>>
+                <td>GET</td>>
+                <td>…/api/items/:id</td>>
+                <td>ID</td>>
+                <td>200 on success
+                    404 if nonexistent
+                    </td>>
+                <td>JSON</td>>
+                <td></td>>
+                <td>{"author":"Grace Hopper","alt":"Image of Grace Hopper at …}</td>>
+            </tr>
+            <tr>
+                <td>Update item</td>>
+                <td>PUT</td>>
+                <td>…/api/items/:id</td>>
+                <td>JSON object with defined author, alt, image, tags, and description fields.</td>>
+                <td>204 on success
+                    404 if nonexistent</td>>
+                <td></td>>
+                <td>{"author":"Tim Berners-Lee","alt":"Image ….}</td>>
+                <td></td>>
+            </tr>
+            <tr>
+                <td>Delete item</td>>
+                <td>DELETE</td>>
+                <td>…/api/items/:id</td>>
+                <td>ID</td>>
+                <td>204 on success
+                    404 if nonexistent</td>>
+                <td></td>>
+                <td></td>>
+                <td></td>>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css" />
+    <script src="about.js" defer></script>
+
+</head>
+<body>
+    <h1>Under development</h1>
+    <a href ="index.html">Go back</a>
+
+    <div id="blob"></div> 
+    <div id="blur"></div>
+    <div class="my_wrapper">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".my_wrapper").fadeOut("slow");
+        })
+    </script>
+
+    
+</body>
+</html>

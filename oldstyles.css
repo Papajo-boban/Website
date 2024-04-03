@@ -1,0 +1,826 @@
+html {
+    background: url("https://images-assets.nasa.gov/image/PIA01322/PIA01322~orig.jpg") fixed center center no-repeat;
+    background-size: cover;
+    overflow: auto;
+    height: 100%;
+    color: white;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 800px;
+    padding: 1ch;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0) 20%);
+    border-style: none none none solid;
+    border-color: white;
+    border-width: 2px;
+    font-size: 18px;
+}
+
+header {
+    position: fixed;
+    top: 3em;
+    left: 3em;
+    color: white;
+    text-align: center;
+}
+
+header ul {
+    background-image: url(https://images-assets.nasa.gov/image/PIA17257/PIA17257~medium.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: 0px 0px 7px #000000;
+    list-style: none inside none;
+    margin: 0;
+    padding: 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+header li a {
+    color: white;
+    display: block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: underline white solid auto;
+}
+
+header li a:hover {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+}
+
+/* Turns the header into a horizontal navbar */
+@media screen and (max-width: 1400px) {
+    header {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    header li,
+    header a {
+        display: inline-block;
+
+    }
+}
+
+a:link {
+    color: aquamarine;
+}
+
+a:visited {
+    color: lightpink;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: white;
+}
+
+h1 {
+    background-image: url(https://images-assets.nasa.gov/image/PIA17257/PIA17257~medium.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 7px #000000;
+
+    color: white;
+    margin-left: -10%;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+}
+
+#welcome {
+    text-transform: none;
+}
+
+figure {
+    float: right;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-right: -10%;
+    margin-top: 5%;
+    max-width: 50%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0em 0em 2em black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+    min-width: auto;
+    text-shadow: 0px 0px 7px #000000;
+    font: 30px bold 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0em 0em 2em black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+    text-indent: 1em;
+}
+
+/* A div that keeps the questions and answers visually together */
+.q-a-pair {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 1em auto;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: inset 0em 0em 5em black;
+}
+
+.q-a-pair .question {
+    background-color: transparent;
+    box-shadow: none;
+    border-style: none;
+    padding: 0em 20px;
+}
+
+.q-a-pair .answer {
+    background-color: transparent;
+    box-shadow: none;
+    border-style: none;
+    padding: 0em 20px;
+}
+
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0 1em 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: inset 0em 0em 5em black;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 30%;
+    text-align: right;
+    padding: 1em 0 0 0;
+    background-color: transparent;
+}
+
+dd {
+    float: left;
+    width: 65%;
+    align-self: center;
+    margin: 0 0 0 0;
+    padding: 1em 0 0 1em;
+    background-color: transparent;
+}
+
+pre {
+    margin: 0 0 0 4em;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0em 0em 2em black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+#authorlist {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0em 0em 2em black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+    list-style-position: inside;
+}
+
+#authorlist,
+#inclusions {
+    display: block;
+}
+
+table {
+    background: transparent;
+    border-radius: 8px;
+    border-collapse: separate;
+    border-spacing: 1em;
+    display: inline-table;
+    margin: 1em;
+    margin-left: -10%;
+    table-layout: auto;
+    width: 100%;
+}
+
+caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0em 0em 2em black;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 0.5em;
+    caption-side: top;
+    background-image: url(https://images-assets.nasa.gov/image/PIA17257/PIA17257~medium.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 30px;
+    font-variant: small-caps;
+    width: 100%;
+}
+
+tr {
+    background-image: url(https://images-assets.nasa.gov/image/PIA17257/PIA17257~medium.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 0 0 1em 0;
+    color: white;
+    font-size: smaller;
+}
+
+td,
+th {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: inset 0em 0em 5em black;
+    text-align: center;
+    margin: 1em 1em 1em 1em;
+    max-width: 10vw;
+    overflow: hidden;
+    padding: 0.5em
+}
+
+/* Firefox has the rectangular background stick out behind the rounded corners, so we keep the corners square.  */
+@supports (-moz-appearance:none) {
+
+    td,
+    th {
+        border-radius: 0;
+    }
+}
+
+table tr td:nth-child(2) {
+    padding: 0;
+}
+
+td ol {
+    text-align: left;
+    list-style-type: decimal;
+    list-style-position: inside;
+    list-style-image: none;
+}
+
+@media screen {
+    td ol {
+        margin-left: -2em;
+    }
+}
+
+td img {
+    max-width: 12vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+cite {
+    font-style: italic;
+}
+
+input[type=text],
+input[type=file],
+input[type=submit],
+input[type=url],
+button {
+    width: 90%;
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 0;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 8px;
+
+}
+
+input[type=file]::file-selector-button {
+    display: block;
+    margin-bottom: 0.5em;
+    border: none;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: black;
+    color: white;
+}
+
+input[type=submit],
+button {
+    width: 90%;
+    margin-top: 20%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+input[type=submit]:hover,
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+#controls {
+    text-align: center;
+    margin: 0;
+    position: fixed;
+    bottom: 3em;
+    left: 3em;
+}
+
+#controls input {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 0;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+#controls input:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* Turns the header into a horizontal navbar */
+@media screen and (max-width: 1400px) {
+    header {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    header li,
+    header a {
+        display: inline-block;
+
+    }
+}
+
+
+/* At this point we shift the formatting to make better use of horizontal space.*/
+@media screen and (max-width: 1100px) {
+
+    /* To keep the headings and other left-escaped elements on screen. */
+    body {
+        margin-left: 10vw;
+    }
+
+    /*To avoid a horizontal scrollbar.*/
+    figure {
+        display: block;
+        width: 100%;
+        float: none;
+        margin-left: 25%
+    }
+}
+
+@media screen and (max-width: 980px) {
+    pre {
+        margin-left: 10%;
+    }
+
+    /* we renders rows as a stack of cells*/
+    table,
+    th,
+    td,
+    tr {
+        display: block;
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    tr {
+        border: 2px solid white;
+        border-radius: 8px;
+        margin-top: 1em;
+        box-shadow: inset 0em 0em 5em black;
+        background-image: url("https://images-assets.nasa.gov/image/PIA01322/PIA01322~orig.jpg");
+    }
+
+    td {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images-assets.nasa.gov/image/PIA01322/PIA01322~orig.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    /* We don't need the column labels anymore.*/
+    tr:first-child,
+    th {
+        display: none;
+    }
+
+    td img {
+        max-width: 50%
+    }
+
+    input[type=file]::file-selector-button {
+        display: inline;
+    }
+
+    caption {
+        display: table;
+    }
+
+    #controls {
+        background-color: white;
+        border-radius: 8px;
+        padding: 0 0.25em;
+        left: auto;
+        right: 1em;
+        bottom: 1em;
+    }
+
+    #controls input {
+        margin: 0.25em 0 0.25em 0;
+        font-size: 18px;
+    }
+}
+
+/* To print we abandon all our fancy layouts and return to simplicity */
+/* It's black on white to save costs, and has just enough formatting to keep it from being ugly.*/
+@media print {
+    html {
+        background-color: white;
+    }
+
+    html * {
+        margin: 0;
+        padding: 0%;
+        color: black;
+        background-image: none;
+        background-color: transparent;
+        box-shadow: none;
+        float: none;
+        border: white 2px solid;
+        text-decoration: none;
+        text-shadow: none;
+    }
+
+    #welcome,
+    #about {
+        margin-top: 20%;
+    }
+
+    section:first-of-type {
+        margin: 5%;
+    }
+
+    figure {
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #about,
+    #q-and-a,
+    #gallery {
+        page-break-before: always;
+    }
+
+    .q-a-pair {
+        box-shadow: none;
+        border: none;
+        margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    caption {
+        text-decoration: underline;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h2,
+    p {
+        margin: 0.5em auto;
+    }
+
+    p,
+    dt,
+    dd,
+    pre {
+        line-height: 1.5em;
+        widows: 4;
+        orphans: 4;
+    }
+
+    pre {
+        margin-left: 10%;
+    }
+
+    tr:last-child,
+    header,
+    input[type=submit] {
+        display: none;
+    }
+
+    td,
+    dl {
+        border: 2px solid black;
+    }
+
+    dl {
+        width: 100%;
+        overflow: hidden;
+        padding: 0 0 1em 0;
+    }
+
+    dt {
+        float: left;
+        clear: left;
+        width: 30%;
+        text-align: right;
+        padding: 1em 0 0 0;
+    }
+
+    dd {
+        float: left;
+        width: 65%;
+        align-self: center;
+        margin: 0 0 0 0;
+        padding: 1em 0 0 1em;
+    }
+
+    table tr td:nth-child(4) {
+        font-size: 13px;
+    }
+
+    td {
+        font-size: 14px;
+        padding: 0.5em
+    }
+
+    form {
+        page-break-after: always;
+    }
+
+    @supports (-moz-appearance:none) {
+        form {
+            page-break-after: avoid;
+        }
+
+        caption {
+            font-size: 25px;
+        }
+    }
+
+
+}
+
+/* MODAL CREDIT: https://micromodal.vercel.app/ */
+
+.modal {
+    font-family: inherit;
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__container {
+    background-color: black;
+    padding: 2em;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 8px;
+    border: 2px white solid;
+    overflow-y: auto;
+    box-sizing: border-box;
+    color: white;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__header h2 {
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin: 0 30px 0 0;
+}
+
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: white;
+    box-sizing: border-box;
+}
+
+.modal__close {
+    background: transparent;
+    color: white;
+    border: 0;
+}
+
+.modal__header .modal__close:before {
+    content: "\2715";
+    font-size: 30px;
+}
+
+.modal__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: white;
+
+}
+
+.modal__content input {
+    display: block;
+}
+
+.modal__btn {
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: black;
+    color: white;
+    border-radius: .25rem;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    appearance: button;
+    text-transform: none;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+    will-change: transform;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: -webkit-transform .25s ease-out;
+    transition: transform .25s ease-out;
+    transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+}
+
+.modal__btn:focus,
+.modal__btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.modal__btn-primary {
+    background-color: #00449e;
+    color: #fff;
+}
+
+
+
+/**************************\
+    Demo Animation Style
+  \**************************/
+@keyframes mmfadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10%);
+    }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
+
+
+.searchHidden {
+    display: none;
+}
+
+.filterHidden {
+    display: none;
+}
+
+#authorlist li:hover {
+    color: aquamarine;
+}
+
+.selected {
+    color: violet;
+    text-decoration: underline;
+}

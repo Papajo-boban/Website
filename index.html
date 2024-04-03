@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <div id="header">
+    <a style="float: right" href="settings.html">SETTINGS</a>
+    <a style="float: right" href="contact.html">CONTACT</a>
+    <a style="float: right" href="about.html">ABOUT</a>
+    <a class ="" data-value = "PROJECT" style="float: right" href="oldmain.html">PROJECT</a>
+  </div>
+  <div id="postheader">
+    <p class="catchphrase">Photographer hobbyist <span class ="divider"><strong><em>/ /</em></strong></span><br>Foodie</p>
+    <p class = "title_description">Photographer, Programmer & Home Cook. Lover of good food and aesthetic images.<br> Currently residing in Amsterdam, Netherlands doing Bachelor in Computer Science</p>
+  </div>
+  <div id="cards">
+    <a href="code.html">
+      <img class="card" src="Photos-002/IMG-20221021-WA0000.jpg" draggable="false"></img></a>
+    <a href="food.html">
+      <img class="card card1" src="Photos-002/IMG_20230417_194718.jpg" draggable="false"></img>
+    </a>
+    <a href="gallery.html">
+      <img class="card" src="Photos-002/IMG_20230504_163757.jpg" draggable="false"></img>
+    </a>
+  </div>
+
+  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <img class="image" src="Photos-002/IMG_20210816_160035.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_0958.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_1900.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_20220921_192949.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_20221024_181952.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_20210806_150845.jpg" draggable="false" />
+    <img class="image" src="Photos-002/IMG_20220322_101249.jpg" draggable="false" />
+  </div>
+  
+  <div id="blob"></div> 
+  <div id="blur"></div>
+  <div id="bottom"></div>
+  <div class="my_wrapper">
+    <div class="wrapper">
+      <div class="box-wrap">
+          <div class="box one"></div>
+          <div class="box two"></div>
+          <div class="box three"></div>
+          <div class="box four"></div>
+          <div class="box five"></div>
+          <div class="box six"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(window).on("load",function(){
+          $(".my_wrapper").fadeOut("slow");
+      })
+  </script>
+</body>
+
+</html>
