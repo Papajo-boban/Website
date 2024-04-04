@@ -68,6 +68,26 @@ p {
   object-fit: cover;
   border-radius: 10px;
 }
+.blur-load::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: pulse 2.5s infinite;
+}
+.blur-load.loaded::before{
+  content: none;
+}
+@keyframes pulse{
+  0%{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50%{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100%{
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
 
 .blur-load{
   background-size: cover;
