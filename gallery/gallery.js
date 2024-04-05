@@ -63,3 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function closeModal() {
     document.getElementById('modal-backdrop').style.display = "none";
 }
+
+//function for scroll bar:
+const progress = document.querySelector('.progress-line');
+document.addEventListener('scroll', function (e) {
+    let progressWidth = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+    progress.style.setProperty('width', progressWidth + '%');
+})

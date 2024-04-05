@@ -26,7 +26,6 @@ body {
   height: 60px;
   position: relative;
   top: 20px;
-  z-index: 100;
   display: flex;
   justify-content: space-evenly;
 }
@@ -94,7 +93,7 @@ body {
   margin: 10px;
   border-radius: 20px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: rgba(255, 250, 255, 0.02);
   border: 1px solid rgba(255, 250, 255, 0.12);
   opacity: 0.6;
@@ -102,7 +101,7 @@ body {
 
 .card1 {
   -o-object-position: 50% 43%;
-     object-position: 50% 43%;
+  object-position: 50% 43%;
 }
 
 .card:hover {
@@ -126,9 +125,9 @@ body {
   width: 40vmin;
   height: 56vmin;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: 100% 50%;
-     object-position: 100% 50%;
+  object-position: 100% 50%;
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 20px;

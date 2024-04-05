@@ -44,8 +44,8 @@ p {
   grid-template-columns: auto auto auto auto;
   grid-gap: 2vmin;
   grid-auto-flow: dense;
-
   /*
+  /*grid-auto-rows: minmax(100, 500px);
   padding: 10px;
   max-width: 95%;
   margin: 0 auto;
@@ -79,7 +79,6 @@ p {
 }
 
 .gallery div:nth-child(2n+3) {
-  /*  */
   grid-row-start: span 2;
 }
 
@@ -273,3 +272,14 @@ p {
   to {transform:scale(1)}
 }
 
+
+.progress-line {
+  top:0;
+  left:0;
+  position:fixed;
+  height: 9px;
+  background: linear-gradient(to right, rgb(148, 40, 40), rgb(216, 198, 78));
+  z-index: 1;
+  border-radius: 2px;
+  transition: cubic-bezier(0, 0, 1, 1);
+}
