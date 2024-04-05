@@ -32,6 +32,7 @@ p {
   color: rgb(142, 96, 12);
 }
 
+/*------Images------*/
 .gallery {
   position: relative;
   height: auto;
@@ -42,18 +43,6 @@ p {
   grid-template-columns: auto auto auto auto;
   grid-gap: 2vmin;
   grid-auto-flow: dense;
-  /*
-  /*grid-auto-rows: minmax(100, 500px);
-  padding: 10px;
-  max-width: 95%;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-flow: dense;
-  grid-auto-rows: 250px;
-  */
-  /*grid-template-columns: 10;*/
 }
 
 .gallery div img {
@@ -61,10 +50,6 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  /*
-  -o-object-fit: cover;
-  border-radius: 10px;
-  */
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
@@ -93,6 +78,7 @@ p {
   grid-row-start: span 1;
 }
 
+/*-----Image Loading Effect-------*/
 .blur-load::before {
   content: "";
   position: absolute;
@@ -130,6 +116,7 @@ p {
   opacity: 0;
 }
 
+/*------Gradual Reveal Effect of Images------*/
 .hidden {
   opacity: 0;
   transition: all 2s;
@@ -161,7 +148,7 @@ p {
   transition-delay: 600ms;
 }
 
-/*cursor-following blur*/
+/*------Cursor-following blob------*/
 #blob {
   height: 300px;
   width: 300px;
@@ -193,6 +180,7 @@ p {
   backdrop-filter: blur(200px);
 }
 
+/*------Media------*/
 @media only screen and (max-width: 780px) {
   .gallery {
     display: grid;
@@ -213,6 +201,7 @@ p {
     display: block;
   }
 }
+/*------Enlaring pictures------*/
 .modal-backdrop {
   display: none;
   position: fixed;
@@ -261,6 +250,7 @@ p {
     transform: scale(1);
   }
 }
+/*------Progress Line------*/
 .progress-line {
   top: 0;
   left: 0;

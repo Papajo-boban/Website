@@ -78,6 +78,7 @@ body {
   font-size: 110%;
 }
 
+/*------Code, Cuisine, Capture------*/
 #cards {
   padding: 20px;
   margin-top: 20px;
@@ -115,6 +116,7 @@ body {
   transition: 700ms;
 }
 
+/*------Scroll Panel------*/
 #image-track {
   display: flex;
   gap: 4vmin;
@@ -142,7 +144,7 @@ body {
   /* Set the gap color to match the background color */
 }
 
-/*cursor-following blur*/
+/*------Cursor Following Blob------*/
 #blob {
   height: 300px;
   background-color: white;
@@ -179,7 +181,6 @@ body {
   backdrop-filter: blur(200px);
 }
 
-/*blur end-----*/
 #bottom {
   height: 200px;
 }
@@ -209,6 +210,7 @@ ul {
   list-style: none;
 }
 
+/*------Footer------*/
 .footer {
   background-color: #24262b;
   padding: 70px 0;
@@ -277,7 +279,7 @@ ul {
   background-color: #ffffff;
 }
 
-/*responsive*/
+/*------Media------*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -337,6 +339,7 @@ ul {
 }
 
 */
+/*------Loading Wrapper------*/
 *,
 *:before,
 *:after {

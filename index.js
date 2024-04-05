@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
 });
 
 
-/*3 cards*/
+/*------Code, Cuisine, Capture------*/
 window.onmouseup = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = nextPercentage;
@@ -23,11 +23,9 @@ for (const card of document.querySelectorAll(".card")) {
     card.onmousemove = e => handleOnMouseMove(e);
 }
 
-/*cards end ----*/
 
 
-
-/*image track */
+/*------Scroll Panel------*/
 const track = document.getElementById("image-track");
 
 
@@ -65,14 +63,11 @@ window.onmousemove = e => {
     }
 
 }
-/*image-track end ------*/
 
 
 
 
-
-
-/*cursor-following blur*/
+/*------Cursor Following Blob------*/
 const blob = document.getElementById('blob');
 
 document.body.onpointermove = event => {
@@ -84,7 +79,8 @@ document.body.onpointermove = event => {
     }, { duration: 2000, fill: "forwards" })
 
 }
-/*blur end-----*/
+
+/*------Glitch------*/
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 document.querySelector(".glitch").onmouseover = event => {
@@ -95,10 +91,12 @@ document.querySelector(".glitch").onmouseover = event => {
                 if (index < iterations) {
                     return event.target.dataset.value[index];
                 }
-                return letters[Math.floor(Math.random() * 26)]}).join("");
+                return letters[Math.floor(Math.random() * 26)]
+            }).join("");
 
-        if (iterations >= event.target.dataset.value.length ) {clearInterval(interval);
+        if (iterations >= event.target.dataset.value.length) {
+            clearInterval(interval);
         }
-        iterations += 1/3;
+        iterations += 1 / 3;
     }, 40);
 }

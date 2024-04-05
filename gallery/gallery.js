@@ -1,3 +1,4 @@
+/*------Gradual Reveal Effect of Images------*/
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -10,7 +11,7 @@ const hidden_element = document.querySelectorAll('.hidden');
 hidden_element.forEach((element) => observer.observe(element));
 
 
-/*cursor-following blur*/
+/*------Cursor Following Blob------*/
 const blob = document.getElementById('blob');
 document.body.onpointermove = event => {
     const { clientX, clientY } = event;
@@ -21,8 +22,8 @@ document.body.onpointermove = event => {
     }, { duration: 3000, fill: "forwards" })
 
 }
-/*blur end*/
 
+/*-----Image Loading Effect-------*/
 const blurDivs = document.querySelectorAll('.blur-load')
 blurDivs.forEach(div => {
     const img = div.querySelector("img")
@@ -38,7 +39,7 @@ blurDivs.forEach(div => {
 }
 )
 
-/*enlarding image after click */
+/*------Enlarging Image Effect------*/
 document.addEventListener('DOMContentLoaded', function () {
     const clickableImages = document.querySelectorAll('.clickable');
 
@@ -59,12 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Function to close the modal
 function closeModal() {
     document.getElementById('modal-backdrop').style.display = "none";
 }
 
-//function for scroll bar:
+/*------Scroll Line------*/
 const progress = document.querySelector('.progress-line');
 document.addEventListener('scroll', function (e) {
     let progressWidth = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
