@@ -120,7 +120,7 @@ p {
 .hidden {
   opacity: 0;
   transition: all 2s;
-  filter: blur(5 px);
+  filter: blur(5px);
 }
 
 .show {
