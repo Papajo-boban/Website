@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     margin: 0;
@@ -10,6 +14,17 @@ body {
     
     overflow-x: hidden;
     */
+    //background-image: url('Photos-001/another.jpg');
+    background-image: url('Photos-001/gap3.jpg');
+    /* Add some other styles to make it look good */
+    background-size: cover;
+    /* Cover the entire page */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-attachment: fixed;
+    /* Make it stay in place while scrolling */
+    background-position: center;
+    /* Center the image */
 }
 
 :root {
@@ -281,7 +296,8 @@ p {
     left: 0;
     position: fixed;
     height: 9px;
-    background: linear-gradient(to right, rgb(148, 40, 40), rgb(216, 198, 78));
+    //background: linear-gradient(to right, rgb(196, 39, 99), #35549c);
+    background: linear-gradient(to right, #5374c1, rgb(196, 39, 99));
     z-index: 1;
     border-radius: 2px;
     transition: cubic-bezier(0, 0, 1, 1);

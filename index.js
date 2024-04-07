@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
 
 
 /*------Code, Cuisine, Capture------*/
+
 window.onmouseup = () => {
     track.dataset.mouseDownAt = "0";
     track.dataset.prevPercentage = nextPercentage;
@@ -74,13 +75,14 @@ document.body.onpointermove = event => {
     const { clientX, clientY } = event;
 
     blob.animate({
-        left: `${clientX}px`,
-        top: `${clientY}px`
+        left: `${clientX - 150}px`,
+        top: `${clientY - 150}px`
     }, { duration: 2000, fill: "forwards" })
 
 }
 
 /*------Glitch------*/
+/*
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 document.querySelector(".glitch").onmouseover = event => {
@@ -100,3 +102,13 @@ document.querySelector(".glitch").onmouseover = event => {
         iterations += 1 / 3;
     }, 40);
 }
+*/ 
+
+
+/*------Hamburger Menu------*/
+const burgerMenu = document.querySelector('.hamburger');
+const settings = document.querySelector('.settings');
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('is-active');
+    settings.classList.toggle('is-active');
+})

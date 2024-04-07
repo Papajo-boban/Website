@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Document</title>
   <link rel="stylesheet" href="index.css" />
   <script src="index.js" defer></script>
@@ -11,14 +12,28 @@
 
 <body>
   <div id="header">
-    <a style="float: right" href="settings/settings.html">SETTINGS</a>
-    <a style="float: right" href="contact/contact.html">CONTACT</a>
-    <a style="float: right" href="about/about.html">ABOUT</a>
-    <a class ="" data-value = "PROJECT" style="float: right" href="oldProject/oldmain.html">PROJECT</a>
+    <a href="contact/contact.html">CONTACT</a>
+    <a href="about/about.html">ABOUT</a>
+    <a class="" data-value="PROJECT" href="oldProject/oldmain.html">PROJECT</a>
+    <button class="hamburger">
+      <div class="bar">
+
+      </div>
+    </button>
+
   </div>
+  <nav class="settings">
+    <a href="contact/contact.html">CONTACT</a>
+    <a href="about/about.html">ABOUT</a>
+    <a class="" data-value="PROJECT" href="oldProject/oldmain.html">PROJECT</a>
+
+  </nav>
+
   <div id="postheader">
-    <p class="catchphrase">Photographer hobbyist <span class ="divider"><strong><em>/ /</em></strong></span><br>Foodie</p>
-    <p class = "title_description">Photographer, Programmer & Home Cook. Lover of good food and aesthetic images.<br> Currently residing in Amsterdam, Netherlands doing Bachelor in Computer Science</p>
+    <p class="catchphrase">Photographer hobbyist <span class="divider"><strong><em>/ /</em></strong></span><br>Foodie
+    </p>
+    <p class="title_description">Photographer, Programmer & Home Cook. Lover of good food and aesthetic images.<br>
+      Currently residing in Amsterdam, Netherlands doing Bachelor in Computer Science</p>
   </div>
   <div id="cards">
     <a href="code/code.html">
@@ -32,27 +47,27 @@
   </div>
 
   <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <img class="image" src="Photos-002/image5.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image7.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image8.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image4.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image3.jpg" draggable="false" loading="lazy"/>
-    <img class="image" src="Photos-002/image6.jpg" draggable="false" loading="lazy"/>
+    <img class="image" src="Photos-002/image5.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image7.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image8.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image4.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image3.jpg" draggable="false" loading="lazy" />
+    <img class="image" src="Photos-002/image6.jpg" draggable="false" loading="lazy" />
   </div>
-  
-  <div id="blob"></div> 
+
+  <div id="blob"></div>
   <div id="blur"></div>
   <div id="bottom"></div>
   <div class="my_wrapper">
     <div class="wrapper">
       <div class="box-wrap">
-          <div class="box one"></div>
-          <div class="box two"></div>
-          <div class="box three"></div>
-          <div class="box four"></div>
-          <div class="box five"></div>
-          <div class="box six"></div>
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+        <div class="box five"></div>
+        <div class="box six"></div>
       </div>
     </div>
   </div>
@@ -91,10 +106,10 @@
         <div class="footer-col">
           <h4>follow us</h4>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/tomas.schuster.5"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/different_world20/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-schuster-014092194/"><i
+                class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
@@ -102,9 +117,9 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-      $(window).on("load",function(){
-          $(".my_wrapper").fadeOut("slow");
-      })
+    $(window).on("load", function () {
+      $(".my_wrapper").fadeOut("slow");
+    })
   </script>
 </body>
 
