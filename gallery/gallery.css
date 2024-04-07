@@ -1,5 +1,8 @@
 html {
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 
   overflow-x: hidden;
   */
-  background-image: url("Photos-001/lines2.jpg");
+  background-image: url("Photos-001/gap3.jpg");
   /* Add some other styles to make it look good */
   background-size: cover;
   /* Cover the entire page */
@@ -46,7 +49,7 @@ body {
   border-radius: 5px;
   background-color: rgb(31, 32, 32);
   transition: 0.2s;
-  z-index: 5;
+  z-index: 2;
 }
 .header *:hover {
   background-color: rgb(59, 59, 56);
@@ -59,7 +62,50 @@ body {
   color: rgb(195, 143, 48);
 }
 
-/*------Images------*/
+/*------Themes------*/
+.themes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 110px;
+  background-color: rgba(16, 16, 16, 0.6);
+}
+.themes div {
+  display: flex;
+  align-items: center;
+  padding: 70px 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.8s;
+  filter: blur(0.8px) brightness(0.8);
+  background-size: cover;
+  background-position: center;
+}
+.themes div:hover {
+  filter: brightness(1);
+}
+.themes .fauna {
+  background-image: url("Photos-001/image6.jpg");
+}
+.themes .flora {
+  background-image: url("Photos-001/image40.jpg");
+}
+.themes .city {
+  background-image: url("Photos-001/image53.jpg");
+}
+.themes .portrait {
+  background-image: url("Photos-001/image59.jpg");
+}
+.themes .landscape {
+  background-image: url("Photos-001/image30.jpg");
+}
+.themes p {
+  color: white;
+}
+
+/*------Gallery------*/
 .gallery {
   position: relative;
   height: auto;
@@ -251,7 +297,7 @@ body {
 .modal-backdrop {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   top: 0;
   width: 100%;
