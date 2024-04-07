@@ -15,7 +15,8 @@ body {
     overflow-x: hidden;
     */
     //background-image: url('Photos-001/another.jpg');
-    background-image: url('Photos-001/gap3.jpg');
+    //background-image: url('Photos-001/gap3.jpg');
+    background-image: url('Photos-001/lines2.jpg');
     /* Add some other styles to make it look good */
     background-size: cover;
     /* Cover the entire page */
@@ -35,19 +36,39 @@ body {
 
 .header {
     padding-bottom: 150px;
+    width: 100%;
+    height: fit-content;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 35px;
+    
+    *{
+        padding: 10px;
+        border-radius:  5px;
+        background-color:rgb(31, 32, 32);
+        transition: 0.2s;
+        z-index: 5;
+
+    }
+    *:hover{
+        background-color: rgb(59, 59, 56);
+
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    
+    p {
+        color: rgb(195, 143, 48);
+    }
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 
-p {
-    color: rgb(142, 96, 12);
-}
 
 /*------Images------*/
 .gallery {
@@ -57,9 +78,23 @@ p {
     margin: auto;
     padding: 45px 0;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 2vmin;
-    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
+    
+    //grid-auto-rows: max 110px;
+    //grid-auto-rows: minmax(50px,300px);
+    gap: 2vmin;
+    grid-auto-flow: dense; //fill in the gaps
+    grid-auto-rows: minmax(140px,200px); //range of row height
+}
+/*
+.gallery > div{
+    min-height: 20vh;
+    max-height: 50vh;
+}
+*/
+
+.tall{
+    grid-row: span 2;
 }
 
 
@@ -70,30 +105,34 @@ p {
     overflow: hidden;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
+
 }
 
 .gallery div:first-child {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .gallery div:nth-child(2n+3) {
-    grid-row-start: span 2;
+    grid-row: span 2;
 }
 
 .gallery div:nth-child(4n+5) {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .gallery div:nth-child(6n+7) {
-    grid-row-start: span 1;
+    grid-row: span 1;
 }
 
 .gallery div:nth-child(8n+9) {
-    grid-column-start: span 1;
-    grid-row-start: span 1;
+    grid-column: span 1;
+    grid-row: span 1;
+
 }
+
 
 /*-----Image Loading Effect-------*/
 .blur-load::before {
@@ -125,6 +164,7 @@ p {
     background-size: cover;
     background-position: center;
     border-radius: 5px;
+    
 }
 
 .blur-load.loaded>img {
@@ -212,19 +252,23 @@ p {
 }
 
 @media only screen and (max-width: 430px) {
+    .header{
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
     .gallery {
         display: block;
-    }
-
-    .gallery div {
-        display: block;
-        margin: 3% 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .gallery div img {
-        display: block;
+        div {
+            display: block;
+            margin: 3% 0;
+            width: 100%;
+            height: 100%;
+            img {
+                display: block;
+            }
+        }
     }
 
 }
@@ -259,6 +303,7 @@ p {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+    cursor: pointer;
 }
 
 /* Add animation */
