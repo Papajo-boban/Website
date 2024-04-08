@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 html {
   scroll-behavior: smooth;
   -webkit-user-select: none;
@@ -75,7 +76,7 @@ body {
 .themes div {
   display: flex;
   align-items: center;
-  padding: 70px 120px;
+  padding: 70px 100px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.8s;
@@ -85,6 +86,12 @@ body {
 }
 .themes div:hover {
   filter: brightness(1);
+}
+.themes [data-filter=all] {
+  background-image: url("Photos-001/all.jpg");
+}
+.themes [data-filter=fauna] {
+  background-image: url("Photos-001/image6.jpg");
 }
 .themes [data-filter=fauna] {
   background-image: url("Photos-001/image6.jpg");
@@ -103,6 +110,7 @@ body {
 }
 .themes p {
   color: white;
+  font-family: "Abril Fatface";
 }
 
 /*------Gallery------*/

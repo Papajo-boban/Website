@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Corrected forEach usage for images
             images.forEach(function (item) { // Moved 'item' inside the function parenthesis
-                if (item.getAttribute('data-category') === theme) { // Use classList.contains() for class checking
+                if (item.getAttribute('data-category') === theme || theme === "all") { // Use classList.contains() for class checking
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
