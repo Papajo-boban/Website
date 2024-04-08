@@ -70,3 +70,37 @@ document.addEventListener('scroll', function (e) {
     let progressWidth = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
     progress.style.setProperty('width', progressWidth + '%');
 })
+
+
+/*------Theme Filtering------*/
+document.addEventListener('DOMContentLoaded', function () {
+    const themes = document.querySelectorAll('.theme');
+    const images = document.querySelectorAll('.gallery-item');
+    console.log("themes: " + themes);
+    var clicked_div = null;
+    // Corrected forEach usage for themes
+    themes.forEach(function (div) { // Moved 'div' inside the function parenthesis
+        div.addEventListener('click', function () {
+            const theme = div.getAttribute('data-filter');
+            if(clicked_div !== null){
+                clicked_div.style.filter = "";
+                clicked_div.style.outline = "";
+                clicked_div.style.transition = "";
+            }
+            clicked_div = div;
+            clicked_div.style.filter= "blur(0)";
+            clicked_div.style.outline="rgb(204, 205, 180) solid 5px";
+            clicked_div.style.transition = "0.2s";
+            console.log("theme: " + theme);
+
+            // Corrected forEach usage for images
+            images.forEach(function (item) { // Moved 'item' inside the function parenthesis
+                if (item.getAttribute('data-category') === theme) { // Use classList.contains() for class checking
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});

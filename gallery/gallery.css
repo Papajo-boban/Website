@@ -86,19 +86,19 @@ body {
 .themes div:hover {
   filter: brightness(1);
 }
-.themes .fauna {
+.themes [data-filter=fauna] {
   background-image: url("Photos-001/image6.jpg");
 }
-.themes .flora {
+.themes [data-filter=flora] {
   background-image: url("Photos-001/image40.jpg");
 }
-.themes .city {
-  background-image: url("Photos-001/image53.jpg");
+.themes [data-filter=city] {
+  background-image: url("Photos-001/image33.jpg");
 }
-.themes .portrait {
+.themes [data-filter=portrait] {
   background-image: url("Photos-001/image59.jpg");
 }
-.themes .landscape {
+.themes [data-filter=landscape] {
   background-image: url("Photos-001/image30.jpg");
 }
 .themes p {

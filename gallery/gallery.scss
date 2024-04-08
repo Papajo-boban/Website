@@ -85,7 +85,7 @@ body {
         border-radius: 5px;
         cursor: pointer;
         transition: 0.8s;
-        filter: blur(0.8px) brightness(0.8);;
+        filter: blur(0.8px) brightness(0.8);
         background-size: cover;
         background-position: center;
 
@@ -97,19 +97,19 @@ body {
         filter: brightness(1);
         
     }
-    .fauna{
+    [data-filter = "fauna"]{
         background-image: url('Photos-001/image6.jpg');
     }
-    .flora{
+    [data-filter = "flora"]{
         background-image: url('Photos-001/image40.jpg');
     }
-    .city{
-        background-image: url('Photos-001/image53.jpg');
+    [data-filter = "city"]{
+        background-image: url('Photos-001/image33.jpg');
     }
-    .portrait{
+    [data-filter = "portrait"]{
         background-image: url('Photos-001/image59.jpg');
     }
-    .landscape{
+    [data-filter = "landscape"]{
         background-image: url('Photos-001/image30.jpg');
     }
     p{
