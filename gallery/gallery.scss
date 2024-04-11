@@ -358,19 +358,15 @@ body {
 
     }
 
-    // .themes{
-    //     display: block;
-    //     width: auto;
-    //     flex-wrap: wrap;
-    // }
-
     .themes{
         margin: 0;
-
+        transition: 0;
         .theme{
             height: 0.3rem;
             width: 100%;
             justify-content: center;
+            transition: 0;
+
         }
 
     }
@@ -379,6 +375,9 @@ body {
 
     .gallery {
         display: block;
+        cursor: none;
+        pointer-events: none; /* Disables clicking */
+        user-select: none; /* Prevents text selection */
 
         div {
             display: block;

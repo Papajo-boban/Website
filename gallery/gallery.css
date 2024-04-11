@@ -317,14 +317,21 @@ body {
   }
   .themes {
     margin: 0;
+    transition: 0;
   }
   .themes .theme {
     height: 0.3rem;
     width: 100%;
     justify-content: center;
+    transition: 0;
   }
   .gallery {
     display: block;
+    cursor: none;
+    pointer-events: none; /* Disables clicking */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none; /* Prevents text selection */
   }
   .gallery div {
     display: block;
