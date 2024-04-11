@@ -76,31 +76,77 @@ document.addEventListener('scroll', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
     const themes = document.querySelectorAll('.theme');
     const images = document.querySelectorAll('.gallery-item');
-    console.log("themes: " + themes);
     var clicked_div = null;
-    // Corrected forEach usage for themes
-    themes.forEach(function (div) { // Moved 'div' inside the function parenthesis
+    var lastCross = null;
+
+    console.log("themes: " + themes);
+
+    themes.forEach(function (div) {
         div.addEventListener('click', function () {
             const theme = div.getAttribute('data-filter');
-            if(clicked_div !== null){
-                clicked_div.style.filter = "";
-                clicked_div.style.outline = "";
-                clicked_div.style.transition = "";
+            const cross = div.querySelector('.cross');
+            if (clicked_div) {
+                setDefault(clicked_div,lastCross);
             }
             clicked_div = div;
-            clicked_div.style.filter= "blur(0)";
-            clicked_div.style.outline="rgb(204, 205, 180) solid 5px";
+            clicked_div.style.filter = "blur(0)";
+            clicked_div.style.outline = "rgb(204, 205, 180) solid 5px";
             clicked_div.style.transition = "0.2s";
-            console.log("theme: " + theme);
+            cross.style.display = "flex";
 
-            // Corrected forEach usage for images
-            images.forEach(function (item) { // Moved 'item' inside the function parenthesis
+            console.log("cross: " + cross);
+            console.log("theme: " + theme);
+            lastCross = cross;
+
+            /*------Cross button------*/
+            lastCross.addEventListener('click', function(event) {
+                event.stopPropagation(); // stop reacting to div being clicked below it
+                console.log("cross clicked");
+                images.forEach(function(item) {
+                    item.style.display = '';
+                }); 
+                setDefault(clicked_div,lastCross);
+
+            });  
+            
+            images.forEach(function (item) { 
                 if (item.getAttribute('data-category') === theme || theme === "all") { // Use classList.contains() for class checking
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
                 }
             });
+            
         });
+        
     });
 });
+
+/*------Set Default Settings------*/
+function setDefault(clicked_div, lastCross){
+    clicked_div.style.filter = "";
+    clicked_div.style.outline = "";
+    clicked_div.style.transition = "";
+    lastCross.style.display = "";
+}
+
+
+
+
+// /*------Calculating Theme Padding------*/
+// document.addEventListener('DOMContentLoaded', function () {
+//     themes = document.querySelectorAll('.theme');
+//     themes.forEach(function (theme) {
+//         textWidth = theme.offsetWidth;
+//         totalWidth = 15.8; // in rem
+//         totalWidthInPixels = totalWidth * parseFloat(getComputedStyle(document.documentElement).fontSize);
+//         console.log("text width: " +textWidth);
+//         console.log("total width in pixels: " +totalWidthInPixels);
+//         if (textWidth < totalWidthInPixels) {
+//             paddingSize = (totalWidthInPixels - textWidth)/2;
+//             theme.style.padding =`3rem ${paddingSize}px`;
+//             console.log("padding "+ paddingSize);
+            
+//         }
+//     })
+// })
