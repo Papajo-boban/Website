@@ -76,8 +76,8 @@ document.addEventListener('scroll', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
     const themes = document.querySelectorAll('.theme');
     const images = document.querySelectorAll('.gallery-item');
-    var clicked_div = null;
     var lastCross = null;
+    let lastClickedDiv = null;
 
     console.log("themes: " + themes);
 
@@ -85,51 +85,67 @@ document.addEventListener('DOMContentLoaded', function () {
         div.addEventListener('click', function () {
             const theme = div.getAttribute('data-filter');
             const cross = div.querySelector('.cross');
-            if (clicked_div) {
-                setDefault(clicked_div,lastCross);
-            }
-            clicked_div = div;
-            clicked_div.style.filter = "blur(0)";
-            clicked_div.style.outline = "rgb(204, 205, 180) solid 5px";
-            clicked_div.style.transition = "0.2s";
-            cross.style.display = "flex";
-
-            console.log("cross: " + cross);
-            console.log("theme: " + theme);
-            lastCross = cross;
 
             /*------Cross button------*/
-            lastCross.addEventListener('click', function(event) {
+            cross.addEventListener('click', function(event) {
                 event.stopPropagation(); // stop reacting to div being clicked below it
                 console.log("cross clicked");
                 images.forEach(function(item) {
                     item.style.display = '';
                 }); 
-                setDefault(clicked_div,lastCross);
+                setDefault(div,cross);
 
             });  
-            
-            images.forEach(function (item) { 
-                if (item.getAttribute('data-category') === theme || theme === "all") { // Use classList.contains() for class checking
+
+            if(lastClickedDiv === div){ // double click
+                images.forEach(function(item) {
                     item.style.display = '';
-                } else {
-                    item.style.display = 'none';
+                }); 
+                setDefault(lastClickedDiv,lastCross);
+                lastClickedDiv = null;
+            }
+
+            else
+            {
+                applyStyle(div, cross);
+                showImages(theme, images);
+                if (lastClickedDiv) {
+                    setDefault(lastClickedDiv, lastCross); // Reset the previous clicked div
                 }
-            });
-            
+                lastClickedDiv = div;
+                lastCross = cross;
+            }
+
+
+
         });
         
     });
 });
 
 /*------Set Default Settings------*/
-function setDefault(clicked_div, lastCross){
+function setDefault(clicked_div, cross){
     clicked_div.style.filter = "";
     clicked_div.style.outline = "";
     clicked_div.style.transition = "";
-    lastCross.style.display = "";
+    cross.style.display = "";
 }
+function applyStyle(clicked_div, cross){
+    clicked_div.style.filter = "blur(0)";
+    clicked_div.style.outline = "rgb(204, 205, 180) solid 5px";
+    clicked_div.style.transition = "0.2s";
+    cross.style.display = "flex";
 
+}
+function showImages(theme, images){
+    images.forEach(function (item) { 
+        if (item.getAttribute('data-category') === theme || theme === "all") { // Use classList.contains() for class checking
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        } 
+    });
+}
 
 
 
