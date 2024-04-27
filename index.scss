@@ -25,7 +25,7 @@ body {
   font-family: "Poppins", sans-serif;
   //background-image: url('Photos-002/gap.jpg');
   //background-image: url('Photos-002/4269557.jpg');
-  background-image: url('Photos-002/homepage4.jpg');
+  // background-image: url('Photos-002/homepage42.jpg');
   /* Add some other styles to make it look good */
   background-size: cover;
   /* Cover the entire page */
@@ -156,29 +156,30 @@ body {
   justify-content: center;
   align-items: left;
   flex-direction: column;
+  width: 70%;
+  p {
+    font-family: Anton;
+    position: relative;
+    top: 30%;}
+
+  .catchphrase {
+    font-size: 45px;
+    line-height: 130%;
+    letter-spacing: -1px;
+  }
+
+  .title_description {
+    font-size: 18px;
+    line-height: 140%;
+    opacity: 70%;
+  }
+
+  .divider {
+    font-size: 110%;
+  }
 }
 
-#postheader p {
-  font-family: Anton;
-  position: relative;
-  top: 30%;
-}
 
-.catchphrase {
-  font-size: 45px;
-  line-height: 130%;
-  letter-spacing: -1px;
-}
-
-.title_description {
-  font-size: 15px;
-  line-height: 140%;
-  opacity: 60%;
-}
-
-.divider {
-  font-size: 110%;
-}
 
 /*------Code, Cuisine, Capture------*/
 #cards {
@@ -427,7 +428,13 @@ ul {
 }
 
 
-@media only screen and (max-width: 430px) {}
+@media only screen and (max-width: 430px) {
+  body{
+    // background-attachment: fixed;
+    // background-image: url('Photos-002/homepage42.jpg');
+
+  }
+}
 
 /*
 

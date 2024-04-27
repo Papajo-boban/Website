@@ -44,18 +44,17 @@ window.onmousemove = e => {
 
     maxDelta = window.innerWidth / 2;
 
-    const percentage = (mouseDelta / maxDelta) * -100;
+    const percentage = (mouseDelta / maxDelta) * - 100;
     nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
 
     track.dataset.percentage = nextPercentage;
 
-    console.log(percentage);
     track.animate({
         transform: `translate(${nextPercentage}%, 0%)`
     }, { duration: 1200, fill: "forwards" });
 
     nextPercentage = Math.min(nextPercentage, 0);
-    nextPercentage = Math.max(nextPercentage, -100);
+    nextPercentage = Math.max(nextPercentage, - 100);
 
     for (const image of track.getElementsByClassName("image")) {
         image.animate({
@@ -123,5 +122,5 @@ window.addEventListener('scroll', () => {
     const scrollPercentage = scrollPosition / totalHeight;
     // Set opacity based on how far the user has scrolled
     const opacity = 0 + scrollPercentage * 0.60;
-    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url('Photos-002/homepage4.jpg')`;
+    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url('Photos-002/homepage42.jpg')`;
 });

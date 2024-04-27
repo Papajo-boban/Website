@@ -23,7 +23,6 @@ body {
   overflow-x: hidden;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
-  background-image: url("Photos-002/homepage4.jpg");
   /* Add some other styles to make it look good */
   background-size: cover;
   /* Cover the entire page */
@@ -148,27 +147,24 @@ body {
   justify-content: center;
   align-items: left;
   flex-direction: column;
+  width: 70%;
 }
-
 #postheader p {
   font-family: Anton;
   position: relative;
   top: 30%;
 }
-
-.catchphrase {
+#postheader .catchphrase {
   font-size: 45px;
   line-height: 130%;
   letter-spacing: -1px;
 }
-
-.title_description {
-  font-size: 15px;
+#postheader .title_description {
+  font-size: 18px;
   line-height: 140%;
-  opacity: 60%;
+  opacity: 70%;
 }
-
-.divider {
+#postheader .divider {
   font-size: 110%;
 }
 
