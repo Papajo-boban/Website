@@ -112,3 +112,16 @@ burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('is-active');
     settings.classList.toggle('is-active');
 })
+
+/*------Darkening Background Image------*/
+window.addEventListener('scroll', () => {
+    // Calculate the total height of the document minus the viewport height
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    // Get current scroll position
+    const scrollPosition = window.pageYOffset;
+    // Calculate the scroll percentage
+    const scrollPercentage = scrollPosition / totalHeight;
+    // Set opacity based on how far the user has scrolled
+    const opacity = 0 + scrollPercentage * 0.60;
+    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url('Photos-002/homepage4.jpg')`;
+});
