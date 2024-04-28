@@ -8,6 +8,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="index.css" />
   <script src="index.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +48,7 @@
     </a>
   </div>
 
-  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+  <div class = "image-track" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
     <img class="image" src="Photos-002/image17.jpg" draggable="false" loading="lazy" />
     <img class="image" src="Photos-002/image7.jpg" draggable="false" loading="lazy" />
     <img class="image" src="Photos-002/image8.jpg" draggable="false" loading="lazy" />
@@ -71,56 +73,28 @@
       </div>
     </div>
   </div>
+  
+  <div class="cursor">
+    <span>&lt;&lt;DRAG&gt;&gt;</span>
+  </div>
+  <div class="cursor-follower"></div>
+</body>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>company</h4>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
-            <li><a href="#">privacy policy</a></li>
-            <li><a href="#">affiliate program</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>get help</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>online shop</h4>
-          <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>follow us</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/tomas.schuster.5"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/different_world20/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-schuster-014092194/"><i
-                class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+<footer>
+  <div class="other-links">
+    <a href="https://www.instagram.com/different_world20/" class="link" target="_blank">Instagram</a> / <a
+      href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-schuster-014092194/" class="link" target="_blank">Linkedin</a>
+  </div>
+  <div class="copyright">
+    Designed and developed by me<br>
+    ©2024 – All Rights Reserved
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(window).on("load", function () {
       $(".my_wrapper").fadeOut("slow");
     })
   </script>
-</body>
+</footer>
 
 </html>

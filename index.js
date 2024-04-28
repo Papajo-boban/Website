@@ -101,7 +101,7 @@ document.querySelector(".glitch").onmouseover = event => {
         iterations += 1 / 3;
     }, 40);
 }
-*/ 
+*/
 
 
 /*------Hamburger Menu------*/
@@ -121,6 +121,50 @@ window.addEventListener('scroll', () => {
     // Calculate the scroll percentage
     const scrollPercentage = scrollPosition / totalHeight;
     // Set opacity based on how far the user has scrolled
-    const opacity = 0 + scrollPercentage * 0.60;
-    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url('Photos-002/homepage42.jpg')`;
+    const opacity = 0.1 + scrollPercentage * 0.60;
+    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, ${opacity})), url('Photos-002/homepage4.jpg')`;
+});
+
+/*------Custom Cursor------*/
+var cursor = $(".cursor");
+    follower = $(".cursor-follower");
+
+var posX = 0,
+    posY = 0,
+    mouseX = 0,
+    mouseY = 0;
+
+TweenMax.to({}, 0.016, {
+    repeat: -1,
+    onRepeat: function () {
+        posX += (mouseX - posX) / 9;
+        posY += (mouseY - posY) / 9;
+
+        TweenMax.set(follower, {
+            css: {
+                left: posX - 20,
+                top: posY - 20
+            }
+        });
+
+        TweenMax.set(cursor, {
+            css: {
+                left: mouseX,
+                top: mouseY
+            }
+        });
+    }
+});
+
+$(document).on("mousemove", function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
+
+$(".image-track").on("mouseenter", function () {
+    cursor.addClass("active");
+});
+
+$(".image-track").on("mouseleave", function () {
+    cursor.removeClass("active");
 });
