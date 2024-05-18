@@ -1,60 +1,208 @@
 html {
-    scroll-behavior: smooth;
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    background-color: rgb(30,30,30);
-    font-family: sans-serif;
-    font-size: 20px;
-}
-a{
-    font-size: 30px;
-    text-decoration:none;
-    margin-top: 50px;
-    color: rgb(191, 100, 21);
+  scroll-behavior: smooth;
 }
 
-h1{
-    color: aliceblue;
+:root {
+  --bg-color: rgb(31, 32, 32);
 }
 
-/*cursor-following blur*/
-#blob{
-    height: 300px ;
-    background-color: white;
-    aspect-ratio: 1;
-    position:fixed;
-    left: 50%;
-    top:50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, purple);
-    animation: rotate 20s infinite;
-    filter: blur(200px);
-    z-index: -2;
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  color: white;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-image: url("mountainBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.99;
+  transition: background-image 0.3s linear;
+}
+
+a {
+  font-size: 30px;
+  text-decoration: none;
+  margin-top: 50px;
+  color: rgb(191, 100, 21);
+}
+
+h1 {
+  color: aliceblue;
+}
+
+/*------Cursor Following Blob------*/
+#blob {
+  height: 150px;
+  background-color: white;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(7, 108, 74), rgb(88, 64, 137));
+  animation: rotate 20s infinite;
+  z-index: -2;
+  filter: blur(90px) brightness(3);
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    50%{
-        scale: 1 1.5;
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*------Project Lifeline------*/
+.timeline {
+  position: relative;
+  width: 95%;
+  height: 110rem;
+  margin: auto;
+  /* Adjust based on your needs */
 }
 
-#blur{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: -1;
-    backdrop-filter: blur(200px);
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 8rem;
 }
-/*blur end*/
+.intro p {
+  color: white;
+  font-size: 3rem;
+}
+
+.node {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: teal;
+  border-radius: 50%;
+  /* Makes the nodes circular */
+  transform: translate(-50%, -50%);
+  /* Center the nodes */
+  transition: transform 0.4s, width 0.4s, height 0.4s;
+  cursor: pointer;
+}
+.node div {
+  opacity: 0;
+}
+
+.node:hover {
+  width: 19rem;
+  height: 10rem;
+  transform: scale(1.5) translate(-25%, -25%);
+  border-radius: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.node:hover div {
+  opacity: 1;
+}
+.node:hover .project-date {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  height: 100%;
+  grid-row: 1/span 2;
+  font-size: 1rem;
+}
+.node:hover .project-date p {
+  margin-left: 10%;
+}
+.node:hover .node-text {
+  width: 100%;
+  height: 100%;
+  grid-row: 3/span 4;
+  font-size: 0.8rem;
+}
+.node:hover .node-text li {
+  margin-left: 10%;
+}
+.node:hover .node-image {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  grid-column: 2;
+  grid-row: span 6;
+  background-image: url("leaflogo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.node:hover .node-window {
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  width: 35rem;
+  height: 35rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3%;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.node:hover .node-window div {
+  border: solid 2px;
+}
+.node:hover .node-window .name {
+  grid-row: 1;
+  grid-column: span 2;
+  border: solid 2px orange;
+}
+.node:hover .node-window .demo {
+  grid-row: 1/span 3;
+  grid-column: 1/span 3;
+  border: solid 2px blue;
+}
+.node:hover .node-window .description {
+  grid-row: 4/span 2;
+  grid-column: span 5;
+  border: solid 2px red;
+}
+.node:hover .node-window .source {
+  grid-row: 6;
+  grid-column: span 5;
+}
+.node:hover .node-window button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: transparent;
+  border-radius: 30%;
+  font-size: 4rem;
+  color: aliceblue;
+}
+.node:hover .node-window button:hover {
+  background-color: rgba(72, 111, 155, 0.5);
+  border-radius: 50%;
+}/*# sourceMappingURL=code.css.map */

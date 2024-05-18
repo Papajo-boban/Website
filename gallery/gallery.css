@@ -75,7 +75,8 @@ body {
   margin-bottom: 7rem;
   background-color: rgba(16, 16, 16, 0.6);
   contain: content;
-  box-sizing: border-box; /* This ensures padding does not cause overflow */
+  box-sizing: border-box;
+  /* This ensures padding does not cause overflow */
 }
 .themes .theme {
   display: flex;
@@ -265,14 +266,18 @@ body {
 
 /*------Cursor-following blob------*/
 #blob {
-  height: 18.75rem;
-  width: 18.75rem;
+  height: 9.3rem;
+  background-color: white;
+  aspect-ratio: 1;
   position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(to right, rgb(7, 108, 74), rgb(88, 64, 137));
   animation: rotate 20s infinite;
   z-index: -2;
-  filter: blur(12.5rem) brightness(3);
+  filter: blur(90px) brightness(3);
 }
 
 @keyframes rotate {
@@ -286,15 +291,17 @@ body {
     transform: rotate(360deg);
   }
 }
-#blur {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  -webkit-backdrop-filter: blur(12.5rem);
-  backdrop-filter: blur(12.5rem);
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 /*------Media------*/
 @media only screen and (max-width: 780px) {
   .gallery {
@@ -330,10 +337,12 @@ body {
   .gallery {
     display: block;
     cursor: none;
-    pointer-events: none; /* Disables clicking */
+    pointer-events: none;
+    /* Disables clicking */
     -webkit-user-select: none;
        -moz-user-select: none;
-            user-select: none; /* Prevents text selection */
+            user-select: none;
+    /* Prevents text selection */
   }
   .gallery div {
     display: block;

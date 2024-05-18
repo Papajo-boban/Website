@@ -74,9 +74,9 @@ document.body.onpointermove = event => {
     const { clientX, clientY } = event;
 
     blob.animate({
-        left: `${clientX - 150}px`,
-        top: `${clientY - 150}px`
-    }, { duration: 2000, fill: "forwards" })
+        left: `${clientX - 75}px`,
+        top: `${clientY - 75}px`
+    }, { duration: 2500, fill: "forwards" })
 
 }
 

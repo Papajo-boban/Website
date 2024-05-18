@@ -25,7 +25,7 @@ body {
   font-family: "Poppins", sans-serif;
   //background-image: url('Photos-002/gap.jpg');
   //background-image: url('Photos-002/4269557.jpg');
-  // background-image: url('Photos-002/homepage42.jpg');
+  background-image: url('Photos-002/homepage4.jpg');
   /* Add some other styles to make it look good */
   background-size: cover;
   /* Cover the entire page */
@@ -257,7 +257,7 @@ body {
 
 /*------Cursor Following Blob------*/
 #blob {
-  height: 300px;
+  height: 150px;
   background-color: white;
   aspect-ratio: 1;
   position: fixed;
@@ -268,30 +268,35 @@ body {
   background: linear-gradient(to right, rgb(7, 108, 74), rgb(88, 64, 137));
   animation: rotate 20s infinite;
   z-index: -2;
-  filter: blur(200px) brightness(3);
+  filter: blur(90px) brightness(3);
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
 
   50% {
-    scale: 1 1.5;
+      scale: 1 1.5;
   }
 
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }
 
-#blur {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  -webkit-backdrop-filter: blur(200px);
-  backdrop-filter: blur(200px);
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  50% {
+      scale: 1 1.5;
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
 }
 
 
