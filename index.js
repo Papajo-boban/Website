@@ -163,8 +163,20 @@ $(document).on("mousemove", function (e) {
 
 $(".image-track").on("mouseenter", function () {
     cursor.addClass("active");
+    $(".cursor span").text("<<DRAG>>");
+    $(".cursor span").css("font-size", "1.5px");
 });
 
 $(".image-track").on("mouseleave", function () {
+    cursor.removeClass("active");
+});
+
+$(".cards").on("mouseenter", function () {
+    cursor.addClass("active");
+    $(".cursor span").text("VIEW");
+    $(".cursor span").css("font-size", "2.0px");
+});
+
+$(".cards").on("mouseleave", function () {
     cursor.removeClass("active");
 });
